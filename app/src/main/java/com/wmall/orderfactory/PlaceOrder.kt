@@ -12,12 +12,14 @@ import android.text.Html
 
 class PlaceOrder : AppCompatActivity() {
     private lateinit var binding: ActivityPlaceOrderBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPlaceOrderBinding.inflate(layoutInflater)
         supportActionBar?.hide()
 
         setContentView(binding.root)
+
         val customerName = intent.getStringExtra(CUSTOMER_NAME)
         val productName = intent.getStringExtra(PRODUCT_NAME)
 

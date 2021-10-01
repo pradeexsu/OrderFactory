@@ -27,7 +27,6 @@
         android:src="@drawable/ic_arrow_back_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivOtpInstruction"
-
         />
 
     <TextView
@@ -45,8 +44,24 @@
         app:layout_constraintStart_toEndOf="@id/ivBackBtn"
         app:layout_constraintTop_toTopOf="@id/ivBackBtn" />
 
+    <TextView
+        android:id="@+id/tvOtpMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:gravity="start"
+        android:textColor="@color/secondary_grey"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/etOtp"
+        app:layout_constraintStart_toStartOf="@id/etOtp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
     <EditText
-        android:id="@+id/etMobileNumber"
+        android:id="@+id/etOtp"
         android:layout_width="170dp"
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
@@ -79,7 +94,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etMobileNumber"
+        app:layout_constraintTop_toBottomOf="@id/etOtp"
         android:textCursorDrawable="@color/primary_color"
         />
 
