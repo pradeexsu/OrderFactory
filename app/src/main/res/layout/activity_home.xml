@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProfile"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@drawable/bg_profile_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/btnLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="Log Out"
+            android:textColor="@color/secondary_grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:text="Hi, Jhone"
+            android:textColor="@color/title_grey"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ivProfilePic"
+            app:layout_constraintHorizontal_bias="0.242"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:text="7766554400"
+            android:textColor="@color/secondary_grey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivProfilePic"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFirstName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_profile_pic"
+            android:padding="5dp"
+            android:src="@drawable/profile_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:flow_horizontalBias=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clProfile"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/flMakeOrder"
+            android:layout_width="@dimen/option_card_width"
+            android:layout_height="@dimen/option_card_height"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="@dimen/cell_margin"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Make Order"
+                android:textColor="@color/title_grey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/icons_size"
+                android:layout_height="@dimen/icons_size"
+                android:layout_gravity="right|bottom"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginBottom="-15dp"
+                android:background="@drawable/bg_icons"
+                android:padding="@dimen/icons_padding"
+                android:src="@drawable/ic_box" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flViewOrders"
+            android:layout_width="@dimen/option_card_width"
+            android:layout_height="@dimen/option_card_height"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="@dimen/cell_margin"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="View Orders"
+                android:textColor="@color/title_grey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/icons_size"
+                android:layout_height="@dimen/icons_size"
+                android:layout_gravity="right|bottom"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginBottom="-15dp"
+                android:background="@drawable/bg_icons"
+                android:padding="@dimen/icons_padding"
+                android:src="@drawable/ic_view_orders" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flCollections"
+            android:layout_width="@dimen/option_card_width"
+            android:layout_height="@dimen/option_card_height"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="@dimen/cell_margin"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Collections"
+                android:textColor="@color/title_grey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/icons_size"
+                android:layout_height="@dimen/icons_size"
+                android:layout_gravity="right|bottom"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginBottom="-15dp"
+                android:background="@drawable/bg_icons"
+                android:padding="@dimen/icons_padding"
+                android:src="@drawable/ic_collaction" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flSettings"
+            android:layout_width="@dimen/option_card_width"
+            android:layout_height="@dimen/option_card_height"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="@dimen/cell_margin"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Settings"
+                android:textColor="@color/title_grey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/icons_size"
+                android:layout_height="@dimen/icons_size"
+                android:layout_gravity="right|bottom"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginBottom="-15dp"
+                android:background="@drawable/bg_icons"
+                android:padding="@dimen/icons_padding"
+                android:src="@drawable/ic_settings" />
+        </FrameLayout>
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
