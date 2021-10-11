@@ -18,8 +18,8 @@ class VerifyOtpActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         val mobileNumber = intent.getStringExtra(MOBILE_NO)
-        Log.d("test", mobileNumber.toString())
-        Toast.makeText(this, mobileNumber.toString(), Toast.LENGTH_LONG).show()
+        Log.d("VerifyOtpActivity", mobileNumber.toString())
+//        Toast.makeText(this, mobileNumber.toString(), Toast.LENGTH_LONG).show()
 
         binding.tvOtpMsg.text = Html.fromHtml("We have sent 4 digit OTP to <b>$mobileNumber</b>")
 
@@ -31,12 +31,12 @@ class VerifyOtpActivity : AppCompatActivity() {
         }
 
         binding.btnConfirmOtp.setOnClickListener {
-            Toast.makeText(this, mobileNumber, Toast.LENGTH_LONG).show()
+//            Toast.makeText(this, mobileNumber, Toast.LENGTH_LONG).show()
 
             val intent = Intent(this@VerifyOtpActivity, HomeActivity::class.java)
             intent.putExtra(MOBILE_NO, mobileNumber)
             startActivity(intent)
-            finish()
+            finishAffinity()
         }
     }
 

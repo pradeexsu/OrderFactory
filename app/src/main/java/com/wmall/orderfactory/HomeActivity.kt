@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.wmall.orderfactory.LoginActivity.Companion.MOBILE_NO
 import com.wmall.orderfactory.databinding.ActivityHomeBinding
 
@@ -16,9 +17,7 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.hide()
         binding.ivProfilePic.setImageResource(R.drawable.img)
         binding.tvMobileNumber.text = intent.getStringExtra(MOBILE_NO)
-        val mobileNumber = intent.getStringExtra(MOBILE_NO)
 
-        Toast.makeText(this, mobileNumber, Toast.LENGTH_LONG).show()
 
         binding.flMakeOrder.setOnClickListener{
             val intent = Intent(this@HomeActivity, SelectCustomer::class.java)
@@ -30,8 +29,11 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
         binding.flCollections.setOnClickListener {
-            Toast.makeText(this@HomeActivity,"feature under Construction", Toast.LENGTH_LONG).show()
+            val products_intnet = Intent(this@HomeActivity, ProductList::class.java)
+            startActivity(products_intnet)
+            finish()
         }
+
         binding.flViewOrders.setOnClickListener {
             Toast.makeText(this@HomeActivity,"feature under Construction", Toast.LENGTH_LONG).show()
         }

@@ -13,12 +13,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-
-        Handler().postDelayed({
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, 3000)
+        val intent = Intent(this@MainActivity, HomeActivity::class.java)
+        startActivity(intent)
+        finishAffinity()
+//
+//        Handler().postDelayed({
+//            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+//            startActivity(intent)
+//            finishAffinity()
+//        }, 3000)
 
     }
 }

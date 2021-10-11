@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
 import android.view.View
-import android.widget.Toast
 import com.wmall.orderfactory.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -28,14 +27,11 @@ class LoginActivity : AppCompatActivity() {
 
         val intent = Intent(this@LoginActivity, VerifyOtpActivity::class.java)
 
-        val mobileNumber = binding.etMobileNumber.text
+        val mobileNumber = binding.etMobileNumber.text.toString()
         intent.putExtra(MOBILE_NO, mobileNumber)
         startActivity(intent)
     }
 
-    fun changeNumber(view: android.view.View) {
-        onBackPressed()
-    }
     companion object{
         const val MOBILE_NO = "mobile_number"
     }
